@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+:root {
+	--font-title: 'Playfair Display', serif;
+	--font-text: 'Montserrat', sans-serif;
+	--font-400: 400;
+	--font-500: 500;
+	--font-700: 700;
+	--cont-size: 1.6rem;
+	--color-dark: #282846;
+	--color-light: #d8ebe4;
+	--color-text: #c0d4cd;
+	--color-priary: #fed049;
+}
+
+body {
+	font-size: var(--cont-size);
+	font-family: var(--font-text);
+	background: var(--color-dark);
+	color: var(--color-light);
+	font-weight: var(--font-400);
+}
+
+main,
+section {
+	padding: 20px 5%;
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--font-title);
+	font-weight: var(--font-700);
+}
+
+.text-primary {
+	color: var(--color-priary);
+}
+
+.main {
+	padding-top: 40px;
+}
+.main-title {
+	font-size: 2.4rem;
+	line-height: 3.2rem;
+	margin-bottom: 1.5rem;
+}
+.main-description {
+	display: flex;
+	column-gap: 1.5rem;
+	align-items: flex-start;
+	margin-bottom: 4rem;
+	color: var(--color-text);
+	font-size: 1.2rem;
+	max-width: 67rem;
+	line-height: 2.2rem;
+	font-style: italic;
+}
+.main-description img {
+	height: 100%;
+	margin-top: 0.5rem;
+}
+.main-image {
+	width: 100%;
+}
+.main-image img {
+	display: block;
+	width: 100%;
+	min-height: 18rem;
+	max-height: 47rem;
+	object-fit: cover;
+	border-radius: 1.5rem;
+	overflow: hidden;
+}
+
+.ingredients {
+	width: 100%;
+}
+.card-header {
+	display: flex;
+	align-items: center;
+	column-gap: 1rem;
+}
+.card-header span {
+	font-size: 2.2rem;
+}
+.card-header span.plate {
+	font-size: 3rem;
+}
+.card-header-title h4 {
+	color: #999999;
+	font-size: 1rem;
+	text-transform: uppercase;
+	font-weight: var(--font-700);
+}
+.card-header-title p {
+	font-size: 1.2rem;
+	font-weight: var(--font-500);
+}
+.card-body {
+	margin-top: 4rem;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.card-body .card-header {
+	margin-bottom: 4rem;
+}
+
+.ingredients-list {
+	padding: 0;
+}
+h2 {
+	font-size: 1.8rem;
+	font-weight: var(--font-700);
+}
+h3 {
+	font-style: italic;
+	font-weight: var(--font-400);
+	font-size: 1.6rem;
+	margin: 2rem 0 3rem;
+}
+.ingredient {
+	display: flex;
+	margin-bottom: 1.5rem;
+	font-size: 1.4rem;
+}
+.ingredient span {
+	margin-right: 1rem;
+	margin-top: -0.5rem;
+	font-size: 2rem;
+}
+.ingredient .italic {
+	font-style: italic;
+}
+
+.instructions h2 {
+	font-size: 2.4rem;
+	margin-bottom: 3rem;
+}
+.instructions .instruction {
+	display: grid;
+	grid-template: 1fr / 3.5rem 1fr;
+	column-gap: 2rem;
+	margin-bottom: 1.5rem;
+}
+.instructions .cuadro {
+	display: block;
+	height: 3.5rem;
+	width: 3.5rem;
+	line-height: 3.5rem;
+	text-align: center;
+	background: var(--color-priary);
+	color: var(--color-dark);
+	font-size: 2.4rem;
+	font-family: var(--font-title);
+	border-radius: 0.5rem;
+}
+.instruction p {
+	color: var(--color-text);
+}
+.instruction strong {
+	color: var(--color-light);
+}
+
+@media screen and (min-width: 600px) {
+	.main-title {
+		font-size: 3.6rem;
+		line-height: 5.4rem;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	main,
+	section {
+		padding: 20px 10%;
+	}
+
+	h2 {
+		font-weight: 2.4rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+
+	.main-title {
+		font-size: 4.8rem;
+		line-height: 6.4rem;
+	}
+	.main-description {
+		font-size: 1.4rem;
+	}
+
+	.ingredients {
+		display: grid;
+		grid-template: 1fr / 1fr 25rem;
+		column-gap: 5rem;
+	}
+	.ingredients-card {
+		order: 2;
+		border-radius: 0.8rem;
+		box-shadow: 0 0 2rem 0 #fed1494f;
+		padding: 4rem 3rem;
+		height: 35rem;
+	}
+	.ingredient p {
+		font-size: 1.6rem;
+	}
+
+	.instructions {
+		max-width: 75%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	main,
+	section {
+		padding: 20px 15%;
+	}
+
+	.ingredients {
+		column-gap: 10rem;
+	}
+}
